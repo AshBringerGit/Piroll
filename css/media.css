@@ -29,9 +29,6 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    .stat-wrap {
-        width: auto;
-    }
     .left-content {
         align-items: center;
         padding-left: 0;
@@ -86,9 +83,6 @@
     .visible-lg {
         display: hide;
     }
-    .stat-wrap {
-        width: auto;
-    }
     .btn-contact {
         width: 80px;
         height: 20px;
@@ -104,6 +98,9 @@
     }
     body {
         overflow-x: hidden;
+    }
+    .stat-wrap {
+        width: 375px;
     }
     .header {
         padding: 15px 10px;
@@ -191,9 +188,6 @@
     }
     .visible-lg {
         display: hide;
-    }
-    .stat-wrap {
-        width: auto;
     }
     .stat-content span {
         width: auto;

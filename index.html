@@ -130,39 +130,85 @@
             <h2>Services</h2>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</span>
         </div>
-        <div class="news">
-            <div class="stat-wrap">
+        <div class="news" id="demo">
+            <div class="stat-wrap" v-on:click="showstat = !showstat">
                 <div class="statistics">
                     <span class="material-icons">trending_up</span>
                     <p>Statistics</p>
-                    <a href="#" class="material-icons">arrow_drop_down</a>
+                    <a class="material-icons">arrow_drop_down</a>
                 </div>
-                <div class="stat-content">
-                    <img src="img/rounded_rectangle_53_306.png" alt="">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                <transition name="fade">
+                    <div v-if="showstat" class="stat-content">
+                        <img src="img/rounded_rectangle_53_306.png" alt="">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</span>
+                    </div>
+                    <transition>
+            </div>
+
+            <div class="stat-wrap" v-on:click="showindex = !showindex">
+                <div class="statistics-sections">
+                    <span class="material-icons">mail</span>
+                    <p>inbox</p>
+                    <a class="material-icons">arrow_drop_down</a>
                 </div>
+                <transition name="fade">
+                    <div v-if="showindex" class="stat-content">
+                        <img src="img/rounded_rectangle_53_306.png" alt="">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</span>
+                    </div>
+                    <transition>
             </div>
-            <div class="statistics-sections">
-                <span class="material-icons">mail</span>
-                <p>inbox</p>
-                <a href="#" class="material-icons">arrow_drop_down</a>
+
+            <div class="stat-wrap" v-on:click="showteam = !showteam">
+                <div class="statistics-sections">
+                    <span class="material-icons">group</span>
+                    <p>team</p>
+                    <a class="material-icons">arrow_drop_down</a>
+                </div>
+                <transition name="fade">
+                    <div v-if="showteam" class="stat-content">
+                        <img src="img/rounded_rectangle_53_306.png" alt="">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</span>
+                    </div>
+                    <transition>
             </div>
-            <div class="statistics-sections">
-                <span class="material-icons">group</span>
-                <p>team</p>
-                <a href="#" class="material-icons">arrow_drop_down</a>
+
+            <div class="stat-wrap" v-on:click="showsettings = !showsettings">
+                <div class="statistics-sections">
+                    <span class="material-icons">settings</span>
+                    <p>settings</p>
+                    <a class="material-icons">arrow_drop_down</a>
+                </div>
+                <transition name="fade">
+                    <div v-if="showsettings" class="stat-content">
+                        <img src="img/rounded_rectangle_53_306.png" alt="">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</span>
+                    </div>
+                    <transition>
             </div>
-            <div class="statistics-sections">
-                <span class="material-icons">settings</span>
-                <p>settings</p>
-                <a href="#" class="material-icons">arrow_drop_down</a>
-            </div>
-            <div class="statistics-sections">
-                <span class="material-icons">rss_feed</span>
-                <p>feed</p>
-                <a href="#" class="material-icons">arrow_drop_down</a>
+
+            <div class="stat-wrap" v-on:click="showfeed = !showfeed">
+                <div class="statistics-sections">
+                    <span class="material-icons">rss_feed</span>
+                    <p>feed</p>
+                    <a href="#" class="material-icons">arrow_drop_down</a>
+                </div>
+                <transition name="fade">
+                    <div v-if="showfeed" class="stat-content">
+                        <img src="img/rounded_rectangle_53_306.png" alt="">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</span>
+                    </div>
+                    <transition>
             </div>
         </div>
     </div>
@@ -295,6 +341,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         $(function() {
             var link = $('.m-menu-link');
@@ -309,6 +356,16 @@
                 menu.toggleClass('m-menu-active');
             });
         });
+        new Vue({
+            el: '#demo',
+            data: {
+                showstat: false,
+                showindex: false,
+                showteam: false,
+                showsettings: false,
+                showfeed: false
+            }
+        })
     </script>
 </body>
 

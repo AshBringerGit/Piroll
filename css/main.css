@@ -148,6 +148,12 @@ h4 {
     outline: none;
 }
 
+.nav-menu a:hover {
+    color: black;
+    transition: 0.2s;
+    font-weight: 800;
+}
+
 .btn-two-left-content {
     outline: none;
     font-size: 1rem;
@@ -412,10 +418,13 @@ h4 {
     padding-left: 20px;
     justify-content: space-between;
     flex-direction: row;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .statistics a {
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .statistics span {
@@ -442,6 +451,7 @@ h4 {
     align-items: center;
     flex-direction: row;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -462,15 +472,18 @@ h4 {
     color: #061e37;
 }
 
+.single_1 {}
+
 .stat-wrap {
+    cursor: pointer;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
     width: 828px;
-    height: 268px;
     background-color: #ffffff;
     border-radius: 5.0px;
+    margin-bottom: 20px;
 }
 
 .news {
@@ -483,8 +496,6 @@ h4 {
     padding-left: 20px;
     justify-content: space-between;
     flex-direction: row;
-    margin-top: 20px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
     height: 58px;
     background-color: #ffffff;
     border-radius: 5.0px;
@@ -956,4 +967,16 @@ form {
 
 .close_menu:hover {
     cursor: pointer;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.fade-enter,
+.fade-leave-to {
+    transition: opacity .2s;
+    opacity: 0;
 }
