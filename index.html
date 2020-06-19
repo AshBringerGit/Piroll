@@ -19,7 +19,21 @@
 </head>
 
 <body>
+
     <div class="main">
+        <a href="#" class="m-menu-link">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <ul class="m-menu">
+            <li class="close_menu">&times;</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Extension</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+
         <div class="header">
             <div class="nav">
                 <div class="logo"><img src="img/logo.png" alt="">
@@ -27,6 +41,7 @@
                     <h4>service manager</h4>
                 </div>
             </div>
+
             <div class="nav-menu">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -280,6 +295,21 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            var link = $('.m-menu-link');
+            var close = $('.close_menu');
+            var menu = $('.m-menu');
+            link.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m-menu-active');
+            });
+            close.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m-menu-active');
+            });
+        });
+    </script>
 </body>
 
 </html>

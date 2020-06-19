@@ -229,6 +229,18 @@
     .our-team span {
         width: auto;
     }
+    .nav-menu {
+        display: none;
+    }
+    .m-menu {
+        display: block;
+    }
+    .m-menu-link {
+        position: absolute;
+        display: block;
+        right: 20px;
+        top: 20px;
+    }
 }
 
 
